@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Základné prvky}{3}{0}{1}
+\beamer@sectionintoc {2}{Bloky}{5}{0}{2}
+\beamer@sectionintoc {3}{Tabuľky a dáta}{7}{0}{3}
+\beamer@sectionintoc {4}{Matematika}{9}{0}{4}
+\beamer@sectionintoc {5}{Obrázky a rozloženie}{10}{0}{5}
+\beamer@sectionintoc {6}{Prekrytia}{12}{0}{6}
+\beamer@sectionintoc {7}{Záver}{16}{0}{7}

@@ -1,0 +1,212 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{utbbeamer-colors}
+
+\makeatletter
+
+% =================================================
+% UTB / faculty colour model
+% =================================================
+% Primary = základná farba identity
+% Secondary = tmavšia doplnková farba
+% Soft = svetlá doplnková farba / jemné pozadie
+% Accent = kontrastná doplnková farba
+% Dark = farba textu na svetlom pozadí
+
+% ---------- Default UTB ----------
+\definecolor{UTBPrimary}{HTML}{F37222}
+\definecolor{UTBSecondary}{HTML}{46505A}
+\definecolor{UTBSoft}{HTML}{BECDD2}
+\definecolor{UTBAccent}{HTML}{E65014}
+\definecolor{UTBDark}{HTML}{000000}
+\definecolor{UTBWhite}{HTML}{FFFFFF}
+
+% ---------- FAI ----------
+\ifdefstring{\utb@faculty}{fai}{
+	\definecolor{UTBPrimary}{HTML}{FECB00}
+	\definecolor{UTBSecondary}{HTML}{F5A500}
+	\definecolor{UTBSoft}{HTML}{FFDCA5}
+	\definecolor{UTBAccent}{HTML}{007D9B}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% ---------- FT ----------
+\ifdefstring{\utb@faculty}{ft}{
+	\definecolor{UTBPrimary}{HTML}{003080}
+	\definecolor{UTBSecondary}{HTML}{0F1455}
+	\definecolor{UTBSoft}{HTML}{2DB4AF}
+	\definecolor{UTBAccent}{HTML}{0A87C5}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% ---------- FaME ----------
+\ifdefstring{\utb@faculty}{fame}{
+	\definecolor{UTBPrimary}{HTML}{63B1E5}
+	\definecolor{UTBSecondary}{HTML}{006487}
+	\definecolor{UTBSoft}{HTML}{C8D22D}
+	\definecolor{UTBAccent}{HTML}{F0AAC8}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% ---------- FMK ----------
+\ifdefstring{\utb@faculty}{fmk}{
+	\definecolor{UTBPrimary}{HTML}{EA2839}
+	\definecolor{UTBSecondary}{HTML}{9B0528}
+	\definecolor{UTBSoft}{HTML}{6EBEA0}
+	\definecolor{UTBAccent}{HTML}{F0875A}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% ---------- FHS ----------
+\ifdefstring{\utb@faculty}{fhs}{
+	\definecolor{UTBPrimary}{HTML}{934114}
+	\definecolor{UTBSecondary}{HTML}{6E1919}
+	\definecolor{UTBSoft}{HTML}{C3C3B9}
+	\definecolor{UTBAccent}{HTML}{E65037}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% ---------- FLKŘ ----------
+\ifdefstring{\utb@faculty}{flkr}{
+	\definecolor{UTBPrimary}{HTML}{C9DD03}
+	\definecolor{UTBSecondary}{HTML}{87B919}
+	\definecolor{UTBSoft}{HTML}{FFEB00}
+	\definecolor{UTBAccent}{HTML}{50377D}
+	\definecolor{UTBDark}{HTML}{000000}
+}{}
+
+% =================================================
+% General document colours
+% =================================================
+
+\setbeamercolor{background canvas}{bg=UTBWhite}
+\setbeamercolor{normal text}{fg=UTBDark,bg=UTBWhite}
+\setbeamercolor{structure}{fg=UTBPrimary}
+
+% =================================================
+% Beamer palettes
+% =================================================
+
+\setbeamercolor{palette primary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette secondary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette tertiary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette quaternary}{fg=UTBDark,bg=UTBPrimary}
+
+\setbeamercolor{palette sidebar primary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette sidebar secondary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette sidebar tertiary}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{palette sidebar quaternary}{fg=UTBDark,bg=UTBPrimary}
+
+% =================================================
+% Header / footer navigation
+% =================================================
+
+\setbeamercolor{section in head/foot}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{subsection in head/foot}{fg=UTBDark,bg=UTBPrimary}
+
+\setbeamercolor{author in head/foot}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{title in head/foot}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{date in head/foot}{fg=UTBDark,bg=UTBPrimary}
+
+% =================================================
+% Titles
+% =================================================
+
+\setbeamercolor{title}{fg=UTBPrimary,bg=UTBWhite}
+\setbeamercolor{subtitle}{fg=UTBSecondary,bg=UTBWhite}
+
+\setbeamercolor{frametitle}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{framesubtitle}{fg=UTBSecondary,bg=UTBPrimary}
+
+\setbeamercolor{titlelike}{fg=UTBPrimary,bg=UTBWhite}
+
+% =================================================
+% Table of contents
+% =================================================
+
+\setbeamercolor{section in toc}{fg=UTBPrimary,bg=UTBWhite}
+\setbeamercolor{subsection in toc}{fg=UTBSecondary,bg=UTBWhite}
+\setbeamercolor{section number projected}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{subsection number projected}{fg=UTBDark,bg=UTBSecondary}
+
+% =================================================
+% Items, bullets, enumeration
+% =================================================
+
+\setbeamercolor{item}{fg=UTBPrimary}
+\setbeamercolor{subitem}{fg=UTBSecondary}
+\setbeamercolor{subsubitem}{fg=UTBAccent}
+
+\setbeamercolor{enumerate item}{fg=UTBPrimary}
+\setbeamercolor{enumerate subitem}{fg=UTBSecondary}
+\setbeamercolor{enumerate subsubitem}{fg=UTBAccent}
+
+\setbeamercolor{item projected}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{subitem projected}{fg=UTBDark,bg=UTBSecondary}
+\setbeamercolor{subsubitem projected}{fg=UTBWhite,bg=UTBAccent}
+
+% =================================================
+% Blocks
+% Keep the Beamer look, only recolour.
+% =================================================
+
+\setbeamercolor{block title}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{block body}{fg=UTBDark,bg=UTBSoft!35!white}
+
+% Alert = use official contrast/accent colour
+\setbeamercolor{block title alerted}{fg=UTBWhite,bg=UTBAccent}
+\setbeamercolor{block body alerted}{fg=UTBDark,bg=UTBAccent!10!white}
+\setbeamercolor{alerted text}{fg=UTBAccent}
+
+% Example = use secondary complementary colour
+\setbeamercolor{block title example}{fg=UTBWhite,bg=UTBSecondary}
+\setbeamercolor{block body example}{fg=UTBDark,bg=UTBSecondary!10!white}
+\setbeamercolor{example text}{fg=UTBSecondary}
+
+% =================================================
+% Bibliography / captions / buttons
+% =================================================
+
+\setbeamercolor{bibliography item}{fg=UTBPrimary}
+\setbeamercolor{bibliography entry author}{fg=UTBDark}
+\setbeamercolor{bibliography entry title}{fg=UTBPrimary}
+\setbeamercolor{bibliography entry location}{fg=UTBSecondary}
+\setbeamercolor{bibliography entry note}{fg=UTBSecondary}
+
+\setbeamercolor{caption name}{fg=UTBPrimary}
+
+\setbeamercolor{button}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{button border}{fg=UTBPrimary}
+
+% =================================================
+% Separation lines / sidebar
+% =================================================
+
+\setbeamercolor{separation line}{bg=UTBPrimary}
+\setbeamercolor{upper separation line head}{bg=UTBPrimary}
+\setbeamercolor{middle separation line head}{bg=UTBPrimary}
+\setbeamercolor{lower separation line head}{bg=UTBPrimary}
+
+\setbeamercolor{upper separation line foot}{bg=UTBPrimary}
+\setbeamercolor{middle separation line foot}{bg=UTBPrimary}
+\setbeamercolor{lower separation line foot}{bg=UTBPrimary}
+
+\setbeamercolor{sidebar}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{sidebar left}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{sidebar right}{fg=UTBDark,bg=UTBPrimary}
+
+% =================================================
+% Theorem-like environments
+% =================================================
+
+\setbeamercolor{theorem title}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{theorem body}{fg=UTBDark,bg=UTBSoft!35!white}
+
+% =================================================
+% Mini frame navigation
+% =================================================
+
+\setbeamercolor{mini frame}{fg=UTBDark,bg=UTBPrimary}
+\setbeamercolor{mini frame in current subsection}{fg=UTBWhite,bg=UTBAccent}
+\setbeamercolor{mini frame in other subsection}{fg=UTBDark,bg=UTBSoft}
+
+\makeatother

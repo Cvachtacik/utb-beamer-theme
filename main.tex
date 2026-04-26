@@ -1,0 +1,295 @@
+\documentclass[aspectratio=169]{beamer}
+
+% ===== BEAMER THEMES TEST =====
+
+%\usetheme{AnnArbor}
+% \usetheme{Antibes}
+% \usetheme{Bergen}
+% \usetheme{Berkeley}
+% \usetheme{Berlin}
+% \usetheme{Boadilla}
+% \usetheme{CambridgeUS}
+% \usetheme{Copenhagen}
+% \usetheme{Darmstadt}
+% \usetheme{Dresden}
+% \usetheme{Frankfurt}
+% \usetheme{Goettingen}
+% \usetheme{Hannover}
+% \usetheme{Ilmenau}
+% \usetheme{JuanLesPins}
+% \usetheme{Luebeck}
+% \usetheme{Madrid}
+% \usetheme{Malmoe}
+% \usetheme{Marburg}
+% \usetheme{Montpellier}
+% \usetheme{PaloAlto}
+% \usetheme{Pittsburgh}
+% \usetheme{Rochester}
+% \usetheme{Singapore}
+% \usetheme{Szeged}
+ \usetheme{Warsaw}
+
+%\usepackage[faculty=fai]{utbbeamer}
+ \usepackage[faculty=utb]{utbbeamer}
+% \usepackage[faculty=ft]{utbbeamer}
+% \usepackage[faculty=fame]{utbbeamer}
+% \usepackage[faculty=fmk]{utbbeamer}
+% \usepackage[faculty=fhs]{utbbeamer}
+% \usepackage[faculty=flkr]{utbbeamer}
+
+\usepackage{booktabs}
+\usepackage{amsmath}
+
+\title[UTB Beamer test]{Testovanie UTB vizuálnej nadstavby pre Beamer}
+\subtitle{Ukážkový dokument pre viacero typov snímkov}
+\author[Meno Priezvisko]{Meno Priezvisko}
+\institute{Univerzita Tomáše Bati ve Zlíně}
+\date{\today}
+
+\begin{document}
+	
+	% -------------------------------------------------
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Obsah}
+		\tableofcontents
+	\end{frame}
+	
+	% =================================================
+	\section{Základné prvky}
+	
+	\begin{frame}{Text a zvýraznenie}
+		Toto je bežný text v prezentácii.
+		
+		\vspace{0.4cm}
+		
+		Toto je \alert{zvýraznený text pomocou príkazu alert}.
+		
+		\vspace{0.4cm}
+		
+		\textbf{Tučný text}, \textit{kurzíva} a \texttt{monospace text}.
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Zoznamy}
+		\begin{itemize}
+			\item Prvá úroveň zoznamu
+			\item Druhá položka
+			\begin{itemize}
+				\item Vnorená položka
+				\item Ďalšia vnorená položka
+			\end{itemize}
+			\item Posledná položka
+		\end{itemize}
+		
+		\vspace{0.4cm}
+		
+		\begin{enumerate}
+			\item Prvý krok
+			\item Druhý krok
+			\item Tretí krok
+		\end{enumerate}
+	\end{frame}
+	
+	% =================================================
+	\section{Bloky}
+	
+	\begin{frame}{Typy blokov}
+		\begin{block}{Bežný blok}
+			Toto je bežný informačný blok.
+		\end{block}
+		
+		\begin{alertblock}{Upozornenie}
+			Toto je alert blok na dôležité informácie.
+		\end{alertblock}
+		
+		\begin{exampleblock}{Príklad}
+			Toto je príkladový blok.
+		\end{exampleblock}
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Viac blokov na jednom snímku}
+		\begin{columns}
+			
+			\begin{column}{0.48\textwidth}
+				\begin{block}{Výhody}
+					\begin{itemize}
+						\item jednotná identita,
+						\item jednoduché použitie,
+						\item kompatibilita s témami.
+					\end{itemize}
+				\end{block}
+			\end{column}
+			
+			\begin{column}{0.48\textwidth}
+				\begin{alertblock}{Riziká}
+					\begin{itemize}
+						\item rôzne správanie tém,
+						\item rozdielne hlavičky,
+						\item potreba testovania.
+					\end{itemize}
+				\end{alertblock}
+			\end{column}
+			
+		\end{columns}
+	\end{frame}
+	
+	% =================================================
+	\section{Tabuľky a dáta}
+	
+	\begin{frame}{Tabuľka}
+		\begin{table}
+			\centering
+			\begin{tabular}{lll}
+				\toprule
+				Prvok & Beamer príkaz & Účel \\
+				\midrule
+				Farba & \texttt{setbeamercolor} & vizuálna identita \\
+				Font & \texttt{setbeamerfont} & typografia \\
+				Pätička & \texttt{setbeamertemplate} & navigácia \\
+				Logo & \texttt{includegraphics} & identifikácia \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Porovnanie fakúlt}
+		\begin{tabular}{ll}
+			\toprule
+			Voľba balíka & Výsledok \\
+			\midrule
+			\texttt{faculty=utb} & hlavná UTB identita \\
+			\texttt{faculty=fai} & Fakulta aplikované informatiky \\
+			\texttt{faculty=ft} & Fakulta technologická \\
+			\texttt{faculty=fame} & Fakulta managementu a ekonomiky \\
+			\texttt{faculty=fmk} & Fakulta multimediálních komunikací \\
+			\texttt{faculty=fhs} & Fakulta humanitních studií \\
+			\texttt{faculty=flkr} & Fakulta logistiky a krizového řízení \\
+			\bottomrule
+		\end{tabular}
+	\end{frame}
+	
+	% =================================================
+	\section{Matematika}
+	
+	\begin{frame}{Matematický zápis}
+		Ukážka rovnice:
+		
+		\[
+		E = mc^2
+		\]
+		
+		Ukážka sústavy:
+		
+		\[
+		\begin{aligned}
+			a^2 + b^2 &= c^2, \\
+			f(x) &= \int_0^x t^2 \, dt.
+		\end{aligned}
+		\]
+		
+		\begin{block}{Poznámka}
+			Matematika ostáva riadená štandardným LaTeX mechanizmom.
+		\end{block}
+	\end{frame}
+	
+	% =================================================
+	\section{Obrázky a rozloženie}
+	
+	\begin{frame}{Logo a text}
+		\begin{columns}
+			
+			\begin{column}{0.45\textwidth}
+				\begin{center}
+					\includegraphics[width=0.8\textwidth]{\UTBLogoFile}
+				\end{center}
+			\end{column}
+			
+			\begin{column}{0.5\textwidth}
+				\begin{block}{Použitie loga}
+					Logo sa používa na titulnej strane a podľa potreby aj v obsahu prezentácie.
+				\end{block}
+			\end{column}
+			
+		\end{columns}
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Dvojstĺpcový layout}
+		\begin{columns}[T]
+			
+			\begin{column}{0.48\textwidth}
+				\textbf{Ľavý stĺpec}
+				
+				\begin{itemize}
+					\item analýza identity,
+					\item výber farieb,
+					\item návrh pravidiel.
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{0.48\textwidth}
+				\textbf{Pravý stĺpec}
+				
+				\begin{enumerate}
+					\item implementácia balíka,
+					\item testovanie tém,
+					\item dokumentácia.
+				\end{enumerate}
+			\end{column}
+			
+		\end{columns}
+	\end{frame}
+	
+	% =================================================
+	\section{Prekrytia}
+	
+	\begin{frame}{Postupné zobrazovanie}
+		\begin{itemize}
+			\item<1-> Najprv sa zobrazí prvý bod.
+			\item<2-> Potom druhý bod.
+			\item<3-> Nakoniec tretí bod.
+		\end{itemize}
+		
+		\only<4>{
+			\begin{alertblock}{Záver}
+				Prekrytia fungujú aj po aplikovaní UTB farieb.
+			\end{alertblock}
+		}
+	\end{frame}
+	
+	% =================================================
+	\section{Záver}
+	
+	\begin{frame}{Zhrnutie testovania}
+		\begin{block}{Overené prvky}
+			\begin{itemize}
+				\item titulná strana,
+				\item obsah,
+				\item hlavička a pätička,
+				\item bloky,
+				\item tabuľky,
+				\item matematika,
+				\item obrázky,
+				\item viacstĺpcové rozloženie.
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
+	% -------------------------------------------------
+	\begin{frame}{Ďakujem za pozornosť}
+		\begin{center}
+			{\Huge Ďakujem}
+			
+			\vspace{0.8cm}
+			
+			\UTBLogoLarge
+		\end{center}
+	\end{frame}
+	
+\end{document}

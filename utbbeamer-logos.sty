@@ -1,0 +1,56 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{utbbeamer-logos}
+
+\makeatletter
+
+\newcommand{\UTBLogoFile}{assets/utb-logo-crop.pdf}
+\newcommand{\UTBBookmarkFile}{assets/utb-bookmark-crop.pdf}
+
+\ifdefstring{\utb@faculty}{utb}{
+	\renewcommand{\UTBLogoFile}{assets/utb-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/utb-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{fai}{
+	\renewcommand{\UTBLogoFile}{assets/fai-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/fai-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{ft}{
+	\renewcommand{\UTBLogoFile}{assets/ft-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/ft-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{fame}{
+	\renewcommand{\UTBLogoFile}{assets/fame-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/fame-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{fmk}{
+	\renewcommand{\UTBLogoFile}{assets/fmk-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/fmk-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{fhs}{
+	\renewcommand{\UTBLogoFile}{assets/fhs-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/fhs-bookmark-crop.pdf}
+}{}
+
+\ifdefstring{\utb@faculty}{flkr}{
+	\renewcommand{\UTBLogoFile}{assets/flkr-logo-crop.pdf}
+	\renewcommand{\UTBBookmarkFile}{assets/flkr-bookmark-crop.pdf}
+}{}
+
+\newcommand{\UTBLogoLarge}{
+	\IfFileExists{\UTBLogoFile}
+	{\includegraphics[height=0.7cm]{\UTBLogoFile}}
+	{}
+}
+
+\newcommand{\UTBLogoSmall}{
+	\IfFileExists{\UTBBookmarkFile}
+	{\includegraphics[height=2.4ex]{\UTBBookmarkFile}}
+	{}
+}
+
+\makeatother

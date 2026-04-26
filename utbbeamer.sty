@@ -1,0 +1,44 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{utbbeamer}
+
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{kvoptions}
+\RequirePackage{etoolbox}
+
+\SetupKeyvalOptions{
+	family=utb,
+	prefix=utb@
+}
+
+\DeclareStringOption[utb]{faculty}
+
+\ProcessKeyvalOptions*
+
+\RequirePackage{utbbeamer-colors}
+\RequirePackage{utbbeamer-logos}
+\RequirePackage{utbbeamer-templates}
+
+\RequirePackage{fontspec}
+
+\setmainfont{UTBText}[
+Path = fonts/,
+Extension = .otf,
+UprightFont = *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
+
+\setsansfont{UTBText}[
+Path = fonts/,
+Extension = .otf,
+UprightFont = *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-Italic,
+BoldItalicFont = *-BoldItalic
+]
+
+\setbeamerfont{title}{family=\sffamily,series=\bfseries}
+\setbeamerfont{frametitle}{family=\sffamily,series=\bfseries}
+\setbeamerfont{normal text}{family=\sffamily}

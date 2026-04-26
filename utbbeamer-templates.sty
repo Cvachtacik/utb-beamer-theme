@@ -1,0 +1,22 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{utbbeamer-templates}
+
+
+% Logo na pôvodnej titulnej strane Beameru.
+\titlegraphic{\UTBLogoLarge}
+
+% Jemná úprava pätičkys bookmarkom.
+\setbeamertemplate{footline}{
+	\leavevmode
+	\hbox{
+		\begin{beamercolorbox}[wd=.16\paperwidth,ht=3ex,dp=1ex,center]{author in head/foot}
+			\UTBLogoSmall
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.64\paperwidth,ht=3ex,dp=1ex,left]{title in head/foot}
+			\hspace{1em}\insertshorttitle
+		\end{beamercolorbox}
+		\begin{beamercolorbox}[wd=.20\paperwidth,ht=3ex,dp=1ex,right]{date in head/foot}
+			\insertframenumber/\inserttotalframenumber\hspace{1em}
+		\end{beamercolorbox}
+	}
+}
