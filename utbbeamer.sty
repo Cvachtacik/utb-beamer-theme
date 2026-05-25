@@ -12,6 +12,7 @@
 }
 
 \DeclareStringOption[utb]{faculty}
+\DeclareStringOption[]{theme}
 
 \ProcessKeyvalOptions*
 
@@ -42,3 +43,24 @@ BoldItalicFont = *-BoldItalic
 \setbeamerfont{title}{family=\sffamily,series=\bfseries}
 \setbeamerfont{frametitle}{family=\sffamily,series=\bfseries}
 \setbeamerfont{normal text}{family=\sffamily}
+
+% =================================================
+% Hyperlink zmena textu
+% =================================================
+
+\RequirePackage{hyperref}
+
+\hypersetup{
+	colorlinks=true,
+	allcolors=UTBLink,
+	linkcolor=UTBLink,
+	urlcolor=UTBLink,
+	citecolor=UTBLink
+}
+% =================================================
+\makeatletter
+\setbeamertemplate{sidebar canvas right}{%
+	\color{UTBPrimary}%
+	\rule{\beamer@rightsidebar}{\paperheight}%
+}
+\makeatother

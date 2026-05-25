@@ -19,6 +19,7 @@
 \definecolor{UTBAccent}{HTML}{E65014}
 \definecolor{UTBDark}{HTML}{000000}
 \definecolor{UTBWhite}{HTML}{FFFFFF}
+\definecolor{UTBLink}{HTML}{000000}
 
 % ---------- FAI ----------
 \ifdefstring{\utb@faculty}{fai}{
@@ -27,6 +28,7 @@
 	\definecolor{UTBSoft}{HTML}{FFDCA5}
 	\definecolor{UTBAccent}{HTML}{007D9B}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{007D9B}
 }{}
 
 % ---------- FT ----------
@@ -36,6 +38,7 @@
 	\definecolor{UTBSoft}{HTML}{2DB4AF}
 	\definecolor{UTBAccent}{HTML}{0A87C5}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{0A87C5}
 }{}
 
 % ---------- FaME ----------
@@ -45,6 +48,7 @@
 	\definecolor{UTBSoft}{HTML}{C8D22D}
 	\definecolor{UTBAccent}{HTML}{F0AAC8}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{000000}
 }{}
 
 % ---------- FMK ----------
@@ -54,6 +58,7 @@
 	\definecolor{UTBSoft}{HTML}{6EBEA0}
 	\definecolor{UTBAccent}{HTML}{F0875A}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{F0875A}
 }{}
 
 % ---------- FHS ----------
@@ -63,6 +68,7 @@
 	\definecolor{UTBSoft}{HTML}{C3C3B9}
 	\definecolor{UTBAccent}{HTML}{E65037}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{E65037}
 }{}
 
 % ---------- FLKŘ ----------
@@ -72,6 +78,7 @@
 	\definecolor{UTBSoft}{HTML}{FFEB00}
 	\definecolor{UTBAccent}{HTML}{50377D}
 	\definecolor{UTBDark}{HTML}{000000}
+	\definecolor{UTBLink}{HTML}{50377D}
 }{}
 
 % =================================================
@@ -208,5 +215,61 @@
 \setbeamercolor{mini frame}{fg=UTBDark,bg=UTBPrimary}
 \setbeamercolor{mini frame in current subsection}{fg=UTBWhite,bg=UTBAccent}
 \setbeamercolor{mini frame in other subsection}{fg=UTBDark,bg=UTBSoft}
+
+% =================================================
+% FT zmena textu
+% =================================================
+
+\ifdefstring{\utb@faculty}{ft}{%
+	
+	% Header / footer
+	\setbeamercolor{section in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{subsection in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	
+	\setbeamercolor{author in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{title in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{date in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Palettes
+	\setbeamercolor{palette primary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette secondary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette tertiary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette quaternary}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Frame titles
+	\setbeamercolor{frametitle}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Blocks
+	\setbeamercolor{block title}{fg=UTBWhite,bg=UTBPrimary}
+	
+}{}
+
+% =================================================
+% FHS zmena textu
+% =================================================
+
+\ifdefstring{\utb@faculty}{fhs}{%
+	
+	% Header / footer
+	\setbeamercolor{section in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{subsection in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	
+	\setbeamercolor{author in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{title in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{date in head/foot}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Palettes
+	\setbeamercolor{palette primary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette secondary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette tertiary}{fg=UTBWhite,bg=UTBPrimary}
+	\setbeamercolor{palette quaternary}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Frame titles
+	\setbeamercolor{frametitle}{fg=UTBWhite,bg=UTBPrimary}
+	
+	% Blocks
+	\setbeamercolor{block title}{fg=UTBWhite,bg=UTBPrimary}
+	
+}{}
 
 \makeatother
